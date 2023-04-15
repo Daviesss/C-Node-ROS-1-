@@ -4,6 +4,23 @@
 #include "cmath"
 #include <iostream>
 //class for movement
+
+class left{
+    public:
+      double speed;
+      ros::NodeHandle nh;
+      ros::Publisher command_velocity_pub = nh.advertise<geometry_msgs::Twist>("/cmd_vel",100);
+      geometry_msgs::Twist velocity_message;
+    void left_drive(){
+      drive_left__(0.2);
+    }
+  private:
+    double drive_left__(double speed){
+      velocity_message.angular.z = speed;
+      command_velocity_pub.publish(velocity_message);
+      }
+};
+
 namespace uiuc{
 class move{
 public:
@@ -29,11 +46,12 @@ void drive_backward(int speed){
 }
 };
   };
+
+//Main function
 int main(int argc,char**argv){
     ros::init(argc,argv,"node_name"); 
-    uiuc::move m;
-    m.drive_forward();//calling the drive forward method
-    // m.drive_backward(0.2);
+    left p;
+    p.left_drive();
     ros::spin();
     return 0;
 }
