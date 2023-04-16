@@ -52,7 +52,6 @@ class laser_callback{
         velocity_message.linear.x = 0.0;
         velocity_message.angular.z = 0.2;
         command_publisher.publish(velocity_message);
-
     }
     
     void forward(){
