@@ -16,7 +16,11 @@ public:
       x = 2;
       int* c = &x;
       *c = 99;
-      cout << "The pointer is:" << c << endl;
+      for (int i = 0;i<sizeof(c);i++){
+         cout << "The pointer is:" << c <<endl;
+      }
+
+     //cout << "The pointer is:" << c << endl;
     }
 
 };
