@@ -49,7 +49,9 @@ class laser_callback{
         command_publisher.publish(velocity_message);
     }
     void rotate(){
-   
+        velocity_message.linear.x = 0.0;
+        velocity_message.angular.z = 0.2;
+        command_publisher.publish(velocity_message);
 
     }
     
