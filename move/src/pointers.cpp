@@ -27,25 +27,3 @@ int main(int argc,char** argv){
  p.pointers_();
  return 0;
 }
-/*
-int main (){
-   int *numpPtr  = new int;
-
-   std::cout << "*numptr" << *numpPtr << std::endl;
-
-   std::cout << "numptr" << numpPtr << std::endl;
-
-   std::cout << "&numptr" << &numpPtr << std::endl;
-
-   //Value of 42
-   *numpPtr = 42;
-
-   std::cout << "*numptr Assigned to value of " << *numpPtr << std::endl;
-
-   std::cout << "*numptr" << *numpPtr << std::endl;
-
-   std::cout << "*numptr" << *numpPtr << std::endl;
-
-   std::cout << "*numptr" << *numpPtr << std::endl;
-}
-*/
