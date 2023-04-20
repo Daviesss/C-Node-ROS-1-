@@ -62,8 +62,6 @@ class action{
 };//main class action
 
 void laser_callback(const sensor_msgs::LaserScanConstPtr& msg){
-    action p;
-    p.forward();//robot moves forward
     //action store(p);//copy constructor
     float angle_min = msg->angle_min;
     float angle_max = msg->angle_max;
@@ -103,6 +101,7 @@ int main(int argc,char**argv){
     ros::Subscriber laser_scan = nh.subscribe("/scan",1,laser_callback);
     action p;
     p.read_marker();
+    p.forward();//robot moves forward
     ros::spin();
     return 0;
 }
