@@ -4,7 +4,7 @@ This package contains c++ ros 1 (O.O.P) nodes.
 # USING VISUAL MARKERS:
 install required dependecies/package 
 ```
-   sudo apt-get install ros-visualization-msgs
+   sudo apt-get install ros-noetic-visualization-msgs
 ```
 
   The markers.cpp in the package shows you how:
